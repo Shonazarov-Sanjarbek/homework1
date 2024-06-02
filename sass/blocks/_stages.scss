@@ -1,0 +1,29 @@
+.stages{
+    width: 100%;
+    margin-top: 120px;
+    &__block{
+        width: 100%;
+        @include dfc(start, center);
+        gap: 48px;
+    }
+    &__subtitle{
+        border: 1px solid red;
+        width: 50%;
+        p{
+            font-size: 48px;
+            line-height: 60px;
+            font-weight: 600;
+            color: $bg-text;
+        }
+    }
+    &__wrapper{
+        width: 100%;
+        @include dfc();
+        gap: 24px;
+    }
+    &__card{
+        width: 100%;
+        @include df();
+        gap: 56px;
+    }
+}
