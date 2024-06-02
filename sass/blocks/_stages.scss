@@ -96,3 +96,21 @@
         padding: 32px;
     }
 }
+@media (max-width: 400px){
+    .stages__img{
+        display: none;
+    }
+    .stages__card{
+        padding: 24px;
+    }
+    .stages__content{
+        gap: 12px;
+    }
+    .stages__desc{
+        gap: 12px;
+    }
+    .stages__desc::after{
+        content: none;
+        gap: 12px;
+    }
+}
