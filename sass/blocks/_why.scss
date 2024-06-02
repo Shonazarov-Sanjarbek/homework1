@@ -1,0 +1,116 @@
+.why{
+    width: 100%;
+    margin-top: 67px;
+    &__block{
+        width: 100%;
+        @include dfc();
+    }
+    &__img{
+        width: 100%;    
+        img{
+            width: 100%;
+        }
+    }
+    &__content{
+        width: 100%;
+        @include df();
+        flex-wrap: wrap;
+        gap: 30px;
+        padding: 50px 0;
+    }
+    &__text{
+        display: none;
+    }
+    &__card{
+        width: calc(50% - 15px);
+        height: 80px;
+        @include df();
+        gap: 40px;
+    }
+    &__card__img{
+        width: 80px;
+        img{
+            width: 100%;
+        }
+        p{
+            display: none;
+        }
+    }
+    &__card__content{
+        width: 80%;
+        p{
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 27px;
+            color: $bg-text;
+        }
+        span{
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            color: $bg-stext;
+        }
+    }
+}
+@media (max-width: 805px){
+    .why{
+        margin-top: 50px;
+    }
+    .why__content{
+        gap: 18px;
+    }
+    .why__text{
+        display: none;
+    }
+    .why__card{
+        width: calc(50% - 9px);
+        gap: 20px;
+    }
+    .why__card__img{
+        width: 65px;
+        img{
+            width: 100%;
+        }
+    }
+    .why__card__content{
+        p{
+            font-size: 18px;
+            line-height: 24px;
+        }
+        span{
+            font-size: 14px;
+            line-height: 18px;
+        }
+    }
+}
+@media (max-width: 750px){
+    .why__content{
+        width: 100%;
+        @include dfc();
+        flex-wrap: nowrap;
+    }
+    .why__text{
+        display: none;
+    }
+    .why__card{
+        width: 100%;
+    }
+}
+@media (max-width: 400px){ 
+    .why__img{
+        img{
+            display: none;
+        }
+    }
+    .why__content{
+        @include dfc(start, center);
+        gap: 30px;  
+    }
+    .why__text{
+        display: block;
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 35px;
+        color: $bg-text;
+    }
+}
