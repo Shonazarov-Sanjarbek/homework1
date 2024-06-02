@@ -7,7 +7,6 @@
         gap: 48px;
     }
     &__subtitle{
-        border: 1px solid red;
         width: 50%;
         p{
             font-size: 48px;
@@ -25,5 +24,75 @@
         width: 100%;
         @include df();
         gap: 56px;
+        padding: 32px 96px;
+        border-radius: 20px     ;
+        box-shadow: 0 10px 50px;
+    }
+    &__img{
+        width: 30%;
+        img{
+            width: 100%;
+        }
+    }
+    &__content{
+        width: 100%;
+        @include dfc(start, center);
+        gap: 24px;
+        span{
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            color: $bg-stext;
+        }
+    }
+    &__desc{
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 25px;
+        color: $bg-text;
+        @include dfc(start,center);
+        gap: 24px;
+    }
+    &__desc::after{
+        content: "";
+        width: 86px;
+        border: 1px solid $bg-sy;
+    }
+}
+@media (max-width: 900px){
+    .stages__content{
+        gap: 12px;
+    }
+    .stages__desc{
+        gap: 12px;
+    }
+}
+@media (max-width: 800px){
+    .stages__img{
+        display: none;
+    }
+    .stages__content{
+        gap: 12px;
+    }
+    .stages__desc{
+        gap: 12px;
+    }
+}
+@media (max-width: 600px){
+    .stages__img{
+        display: none;
+    }
+    .stages__content{
+        gap: 12px;
+    }
+    .stages__desc{
+        gap: 12px;
+    }
+    .stages__desc::after{
+        content: none;
+        gap: 12px;
+    }
+    .stages__card{
+        padding: 32px;
     }
 }
